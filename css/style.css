@@ -1,0 +1,73 @@
+.amaticSC{
+	font-family: 'Amatic SC', cursive;
+    	font-weight: 600;
+}
+.bowlbyOneSC{
+	font-family: 'Bowlby One SC', cursive;
+}
+#loader{
+	position: fixed;
+    	background: rgba(255,255,255,0.9);
+    	width: 100%;
+    	height: 100%;
+    	text-align: center;
+    	padding-top: 50%;
+    	z-index: 1000;
+}
+nav{
+	background: rgba(0, 16, 39, 0.7);
+	position: fixed;
+	z-index: 999;
+}
+nav a{
+	width: 100%;
+	height: 100%;
+}
+nav img{
+	height: 100%;
+	display: block;
+    	float: left;
+}
+nav p{
+	margin: 0;
+	display: block;
+	float: left;
+	font-size: 40px;
+	letter-spacing: 1px;
+}
+#hero{
+	background-image: url(../images/bg.jpg);
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	height: 100vh;
+	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+	padding-top: 70px;
+    	text-align: center;
+    	color: #fff;
+}
+#hero h1{
+	font-size: 25vw;
+}
+#hero h4{
+	font-size: 35px;
+}
+#about{
+	background: linear-gradient(to right, #bd1b52, #FF9800);
+    	padding: 50px 0;
+    	font-size: 12px;
+}
+#about p{
+	font-size: 20px;
+}
+#about p span{
+	font-weight: 400;
+}
+body{
+	background-image: url(../images/bg2.png);
+}
+
+body > .container > h3{
+	text-align: center;
+	color: #fff;
+}
