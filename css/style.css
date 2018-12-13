@@ -71,3 +71,23 @@ body > .container > h3{
 	text-align: center;
 	color: #fff;
 }
+
+footer p{
+	font-size: 20px;
+}
+
+footer.page-footer{
+	background-color: #009688;
+}
+
+footer a{
+	text-decoration: underline;
+    	color: #fff;
+    	font-size: 16px;	
+}
+
+.footer-copyright a{
+	font-size: 22px;
+	letter-spacing: 1.5px;
+	text-decoration: none;
+}

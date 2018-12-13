@@ -3,7 +3,7 @@
   "short_name": "Exop",
   "description": "Quest for a Habitable Exoplanet",
   "lang": "en-US",
-  "start_url": "/index.html",
+  "start_url": "/Exop",
   "display": "fullscreen",
   "orientation": "portrait",
   "theme_color": "#f44336",
