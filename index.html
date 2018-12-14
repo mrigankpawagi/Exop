@@ -102,12 +102,64 @@
 	</div>
 	<nav class="nav-extended">
 		<div class="nav-wrapper">
-			<a href="#" class="brand-logo">
+			<a class="brand-logo">
 				<img src="images/icons/icon-512x512.png">
 				<p class="bowlbyOneSC">EXOP</p>
 			</a>
+			<ul class="right">
+        				<li>
+        					<a href="#" data-target="slide-out" class="sidenav-trigger">
+        						<i class="fas fa-bars"></i>
+        					</a>
+        				</li>
+      			</ul>
 		</div>
 	</nav>
+	<ul id="slide-out" class="sidenav">
+    		<li>
+    			<div class="user-view">
+      				<div class="background">
+        					<img src="images/bg.jpg">
+      				</div>
+      				<a><img class="circle" src="images/icons/icon-512x512.png"></a>
+      				<a><h3 class="white-text bowlbyOneSC">EXOP</h3></a>
+     				<a><h5 class="white-text amaticSC">Quest for a Habitable Exoplanet</h5></a>
+     				<br>
+    			</div>
+    		</li>
+    		<li>
+    			<a href="#hero" class="amaticSC menuLinks">
+    				<i class="fa fa-home"></i>
+    				Home
+    			</a>
+    		</li>   		
+    		<li><div class="divider"></div></li>
+    		<li>
+    			<a href="#planetsLabel" class="amaticSC menuLinks">
+    				<i class="fa fa-database"></i>
+    				The Most Habitable Exoplanets
+    			</a>
+    		</li>
+    		<li>
+    			<a href="#typeFlagLabel" class="amaticSC menuLinks">
+    				<i class="fa fa-star"></i>
+    				Star Systems
+    			</a>
+    		</li>
+    		<li>
+    			<a href="#conformityLabel" class="amaticSC menuLinks">
+    				<i class="fa fa-check"></i>
+    				Conformity
+    			</a>
+    		</li>
+    		<li><div class="divider"></div></li>
+    		<li>
+    			<a href="#about" class="amaticSC menuLinks">
+    				<i class="fa fa-question"></i>
+    				About
+    			</a>
+    		</li>
+  	</ul>
 	<div id="hero">
 		<br>
 		<h1 class="bowlbyOneSC">EXOP</h1>
@@ -117,6 +169,29 @@
 			<i class="fa fa-space-shuttle"></i> 
 			<i class="fa fa-sun"></i>
 		</h4>
+	</div>
+	<div class="container">
+		<h3 class="amaticSC" id="planetsLabel">
+			The Most Habitable
+			<br>
+			<span class="bowlbyOneSC">
+				Exoplanets
+			</span>
+		</h3>
+		<div class="row" id="planetsList">
+  		</div>
+		<h3 class="amaticSC" id="typeFlagLabel">
+			Star Systems
+		</h3>
+		<div class="row" id="typeFlag">
+			<canvas id="typeFlagChart" width="400" height="400"></canvas>
+  		</div>
+		<h3 class="amaticSC" id="conformityLabel">
+			Conformity
+		</h3>
+		<div class="row" id="conformity">
+			<canvas id="conformityChart" width="400" height="400"></canvas>
+  		</div>
 	</div>
 	<div id="about">
 		<div class="container">
@@ -133,18 +208,10 @@
 				<br>
 				This is basically meant to give us an idea of which exoplanet out of the dataset is most likely to be habitable.
 			</p>
+			<br><br>
+			<h4 align="center" class="amaticSC">The Dev</h4>
+			<img src="images/mrigank.jpg" class="dev">
 		</div>
-	</div>
-	<div class="container">
-		<h3 class="amaticSC">
-			The Most Habitable
-			<br>
-			<span class="bowlbyOneSC">
-				Exoplanets
-			</span>
-		</h3>
-		<div class="row" id="planetsList">
-  		</div>
 	</div>
 	<footer class="page-footer">
           		<div class="container">
@@ -170,11 +237,10 @@
           		</div>
           		<div class="footer-copyright">
             			<div class="container">
-            				All Rights Reserved ©
             				<a class="grey-text text-lighten-4 right amaticSC" href="https://github.com/mrigankpawagi/Exop">EXOP is on <i class="fab fa-github"></i> GitHub!</a>
             			</div>
           		</div>
-       	 	</footer>
+       	 </footer>
 	<div id="info" class="modal modal-fixed-footer">
     		<div class="modal-content">
       			<h4></h4>
@@ -192,6 +258,7 @@
 	<!--SCRIPTS-->
 	<script src="js/jquery.min.js"></script>
 	<script src="js/materialize.min.js"></script>
+	<script src="js/Chart.bundle.min.js"></script>
 	<script src="js/analysis.js"></script>
 	<script src="js/script.js"></script>
 </body>
