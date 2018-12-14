@@ -107,3 +107,7 @@ footer a{
 	font-weight: 600!important;
 	font-size: 20px!important;
 }
+
+.sidenav-trigger{
+	display: block!important;
+}
