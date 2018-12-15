@@ -196,6 +196,64 @@ function discoveryYearChart(){
 	});
 }
 
+function radiusDistChart(){
+	var bubbles = [], colors = [], names = [];
+	for(var x = 0; x < planets.length; x++){
+		if(planets[x]['RadiusJpt'] == '' || planets[x]['DistFromSunParsec'] == '')
+			continue;
+		bubbles[x] = { 
+			x: Math.sqrt((planets[x]['DistFromSunParsec'] ** 2) / 2),
+			y: Math.sqrt((planets[x]['DistFromSunParsec'] ** 2) / 2),
+			r: planets[x]['RadiusJpt']
+		};
+		colors.push(RandomColor());
+		names.push(planets[x]['PlanetIdentifier']);
+	}
+	data = {
+    		datasets: [{
+        			data: bubbles,
+        			label: '',
+        			borderWidth: 0,
+        			backgroundColor: colors
+        		}],
+        		labels: names
+	};
+	var ctx = document.getElementById("radiusDistChart").getContext('2d');
+	var radiusDistChart = new Chart(ctx,{
+    		type: 'bubble',
+    		data: data,
+    		options: {
+    			scales: {
+        				yAxes: [{
+            					display: true,
+            					ticks: {
+                					suggestedMin: 0,
+                					beginAtZero: true,
+                					max: 2263
+            					}
+        				}],
+        				xAxes: [{
+            					display: true,
+            					ticks: {
+                					suggestedMin: 0,
+                					beginAtZero: true,
+                					max: 2263
+            					}
+        				}]
+    			}
+    		}
+	});
+}
+
+function RandomColor() {
+  	var letters = '0123456789ABCDEF';
+  	var color = '#';
+  	for (var i = 0; i < 6; i++) {
+    		color += letters[Math.floor(Math.random() * 16)];
+  	}
+  	return color;
+}
+
 function loaded(){
 	populate();
 	$("#loader").fadeOut(400);
@@ -203,4 +261,5 @@ function loaded(){
 	conformityChart();
 	discoveryMethodChart();
 	discoveryYearChart();
+	radiusDistChart();
 }
