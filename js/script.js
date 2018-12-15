@@ -50,7 +50,6 @@ function typeFlagChart(){
 			flags[planets[x]['TypeFlag']] += 1;
 		}
 	}
-	console.log(flags);
 	data = {
     		datasets: [{
         			data: flags,
@@ -80,15 +79,14 @@ function conformityChart(){
 			flags[1] += 1;
 		}
 	}
-	console.log(flags);
 	data = {
     		datasets: [{
         			data: flags,
         			backgroundColor: ["#2ECC40", "#FF851B"]
     		}],
     		labels: [
-        			'Confirmed', 
-        			'Controversial'
+        			'Confirmed Planets', 
+        			'Controversial Planets'
     		]
 	};
 	var ctx = document.getElementById("conformityChart").getContext('2d');
@@ -99,10 +97,110 @@ function conformityChart(){
 	});
 }
 
+function discoveryMethodChart(){
+	var flags = [0, 0, 0, 0, 0]
+	for(var x = 0; x < planets.length; x++){
+		if(planets[x]['DiscoveryMethod'] == 'RV'){
+			flags[0] += 1;
+		}
+		else if(planets[x]['DiscoveryMethod'] == 'imaging'){
+			flags[1] += 1;
+		}
+		else if(planets[x]['DiscoveryMethod'] == 'microlensing'){
+			flags[2] += 1;
+		}
+		else if(planets[x]['DiscoveryMethod'] == 'timing'){
+			flags[3] += 1;
+		}
+		else if(planets[x]['DiscoveryMethod'] == 'transit'){
+			flags[4] += 1;
+		}
+	}
+	data = {
+    		datasets: [{
+        			data: flags,
+        			backgroundColor: ["#0074D9", "#FF4136", "#2ECC40", "#FF851B", '#0FC5D6']
+    		}],
+    		labels: [
+        			'RV',
+        			'Imaging',
+        			'Microlensing',
+        			'Timing',
+        			'Transit'
+    		]
+	};
+	var ctx = document.getElementById("discoveryMethodChart").getContext('2d');
+	var discoveryMethodChart = new Chart(ctx,{
+    		type: 'doughnut',
+    		data: data,
+    		options: Chart.defaults.doughnut
+	});
+}
+
+function discoveryYearChart(){
+	var years = [], yearLabels = [], yearLabelsShort = [];
+	for(var i = 1; i <= new Date().getFullYear(); i++)
+		years[i] = 0;
+	for(var i = 1781, j = 0; i <= new Date().getFullYear(); i++){
+		yearLabels[j] = i;
+		j++;
+	}
+	for(var x = 0; x < planets.length; x++){
+		if(planets[x]['DiscoveryYear'] == '')
+			continue;
+		years[planets[x]['DiscoveryYear'] - 0]++;
+	}
+	
+	data = {
+    		datasets: [{
+        			data: years.slice(1781, years.length),
+        			label: 'Number of Discoveries by Year',
+        			borderColor: '#FF5722',
+        			backgroundColor: '#FFFFFF00',
+        			pointBorderWidth: 0,
+        			pointRadius: 0,
+        			lineTension: 0
+    		}],
+    		labels: yearLabels
+	};
+	var ctx = document.getElementById("discoveryYearChart").getContext('2d');
+	var discoveryYearChart = new Chart(ctx,{
+    		type: 'line',
+    		data: data,
+    		options: Chart.defaults.line
+	});
+
+
+	for(var i = 1990, j = 0; i <= new Date().getFullYear(); i++){
+		yearLabelsShort[j] = i;
+		j++;
+	}
+	dataShort = {
+    		datasets: [{
+        			data: years.slice(1990, years.length),
+        			label: 'Number of Discoveries by Year',
+        			borderColor: '#FF5722',
+        			backgroundColor: '#FFFFFF00',
+        			pointBorderWidth: 0,
+        			pointRadius: 0,
+        			lineTension: 0
+    		}],
+    		labels: yearLabelsShort
+	};
+
+	var ctx = document.getElementById("discoveryYearShortChart").getContext('2d');
+	var discoveryYearShortChart = new Chart(ctx,{
+    		type: 'line',
+    		data: dataShort,
+    		options: Chart.defaults.line
+	});
+}
+
 function loaded(){
-	console.log(result);
 	populate();
 	$("#loader").fadeOut(400);
 	typeFlagChart();
 	conformityChart();
+	discoveryMethodChart();
+	discoveryYearChart();
 }

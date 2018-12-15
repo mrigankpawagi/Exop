@@ -47,7 +47,7 @@
 	<link rel="stylesheet" href="css/fontawesome-all.min.css">
 	<link rel="stylesheet" href="css/materialize.min.css">
 	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC|Bowlby+One+SC" async>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC|Bowlby+One+SC|Montserrat" async>
 </head>
 
 <body>
@@ -128,33 +128,43 @@
     			</div>
     		</li>
     		<li>
-    			<a href="#hero" class="amaticSC menuLinks">
+    			<a href="#hero" class="montserrat menuLinks">
     				<i class="fa fa-home"></i>
     				Home
     			</a>
     		</li>   		
     		<li><div class="divider"></div></li>
     		<li>
-    			<a href="#planetsLabel" class="amaticSC menuLinks">
+    			<a href="#planetsLabel" class="montserrat menuLinks">
     				<i class="fa fa-database"></i>
     				The Most Habitable Exoplanets
     			</a>
     		</li>
     		<li>
-    			<a href="#typeFlagLabel" class="amaticSC menuLinks">
+    			<a href="#typeFlagLabel" class="montserrat menuLinks">
     				<i class="fa fa-star"></i>
     				Star Systems
     			</a>
     		</li>
     		<li>
-    			<a href="#conformityLabel" class="amaticSC menuLinks">
+    			<a href="#conformityLabel" class="montserrat menuLinks">
     				<i class="fa fa-check"></i>
     				Conformity
     			</a>
     		</li>
+    		<li>
+    			<a href="#discoveryMethodLabel" class="montserrat menuLinks">
+    				Discovery Method
+    			</a>
+    		</li>
+    		<li>
+    			<a href="#discoveryYearLabel" class="montserrat menuLinks">
+    				Discovery over Years
+    			</a>
+    		</li>
     		<li><div class="divider"></div></li>
     		<li>
-    			<a href="#about" class="amaticSC menuLinks">
+    			<a href="#about" class="montserrat menuLinks">
     				<i class="fa fa-question"></i>
     				About
     			</a>
@@ -183,15 +193,32 @@
 		<h3 class="amaticSC" id="typeFlagLabel">
 			Star Systems
 		</h3>
-		<div class="row" id="typeFlag">
+		<div class="card chart" id="typeFlag">
 			<canvas id="typeFlagChart" width="400" height="400"></canvas>
   		</div>
 		<h3 class="amaticSC" id="conformityLabel">
 			Conformity
 		</h3>
-		<div class="row" id="conformity">
+		<div class="card chart" id="conformity">
 			<canvas id="conformityChart" width="400" height="400"></canvas>
   		</div>
+		<h3 class="amaticSC" id="discoveryMethodLabel">
+			Discovery Method
+		</h3>
+		<div class="card chart" id="discoveryMethod">
+			<canvas id="discoveryMethodChart" width="400" height="400"></canvas>
+  		</div>
+		<h3 class="amaticSC" id="discoveryYearLabel">
+			Discovery over the Years
+		</h3>
+		<div class="card chart" id="discoveryYear">
+			<canvas id="discoveryYearChart" width="400" height="400"></canvas>
+  		</div>
+  		<br>
+		<div class="card chart" id="discoveryYearShort">
+			<canvas id="discoveryYearShortChart" width="400" height="400"></canvas>
+  		</div>
+  		<br><br>
 	</div>
 	<div id="about">
 		<div class="container">
@@ -231,6 +258,11 @@
                 					<br>
                 					<i class="fa fa-envelope"></i> 
                 					<a href="mailto:mrigankpawagi@gmail.com">mrigankpawagi@gmail.com</a>
+                				</p>
+                				<p class="grey-text text-lighten-4">
+                					<p class="amaticSC">Vanshaj Chaudhary</p>
+                					<i class="fa fa-envelope"></i> 
+                					<a href="mailto:avdesh.chaudhary@gmail.com">avdesh.chaudhary@gmail.com</a>
                 				</p>
               			</div>
             			</div>
