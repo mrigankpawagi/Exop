@@ -13,3 +13,5 @@ _- space.com_
 **EXOP** is a simple Web App, that analyzes a large dataset of about 3300+ exoplanets, and applies on it an intelligent algorithm to check which exoplanet is the 'most identical' to Earth, the home planet, and Mars, the red neighbour which is most likely to have once supported life. 
 
 This is basically meant to give us an idea of which exoplanet out of the dataset is most likely to be habitable.
+
+**EXOP** also includes various data visualisations to provide a concise and accurate overview of various aspects of the planets in the database.
