@@ -5,6 +5,9 @@
 .bowlbyOneSC{
 	font-family: 'Bowlby One SC', cursive;
 }
+.montserrat{
+	font-family: 'Montserrat', sans-serif;
+}
 #loader{
 	position: fixed;
     	background: rgba(255,255,255,0.9);
@@ -105,9 +108,17 @@ footer a{
 }
 .menuLinks{
 	font-weight: 600!important;
-	font-size: 20px!important;
+	height: auto!important;
+}
+.menuLinks i{
+	margin-right: 15px!important;
 }
 
 .sidenav-trigger{
 	display: block!important;
+}
+.chart{
+	max-width: 500px;
+	width: 100%;
+	margin: auto;
 }
