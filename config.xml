@@ -1,0 +1,8 @@
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.pawagi.mrigank.Exop" versionCode="1" version="1.0.0">
+<name>Exop</name>
+<description>
+Quest for a Habitable Expoplanet
+</description>
+<author href="https://mrigank.pawagi.com" email="mrigankpawagi@gmail.com"> Mrigank Pawagi </author>
+<icon src="/images/icons/icon-512x512.png"/>
+</widget>
